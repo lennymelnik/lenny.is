@@ -1,0 +1,30 @@
+---
+layout: default
+title: Exploring
+permalink: /exploring/
+---
+{% include exploringhero.html %}
+
+<section class="max-w-5xl mx-auto px-6 py-16">
+  <h1 class="text-4xl font-bold text-center mb-12">Exploring</h1>
+  <!-- <p class="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
+    Outside of work, I find joy in chasing curiosity—whether that means restoring vintage tech, flying drones, starting a homelab, or experimenting with new tools and ideas. Here's a peek into the things I'm exploring lately.
+  </p> -->
+
+  <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+    {% assign exploring_items = site.exploring %}
+    {% for item in exploring_items %}
+      <a href="{{ item.url }}" class="group block border border-gray-800 rounded-xl overflow-hidden bg-card hover:shadow-lg transition-all duration-200">
+        {% if item.image %}
+          <img src="{{ item.image }}" alt="{{ item.title }}" class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+        {% else %}
+          <div class="h-48 w-full bg-gray-700 flex items-center justify-center text-white text-lg">No Image</div>
+        {% endif %}
+        <div class="p-5 space-y-2">
+          <h2 class="text-xl font-semibold group-hover:underline" style="color: var(--accent);">{{ item.title }}</h2>
+          <p class="text-sm text-muted-foreground">{{ item.description }}</p>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>

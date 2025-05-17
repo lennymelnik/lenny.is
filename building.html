@@ -1,0 +1,26 @@
+---
+layout: default
+title: Building
+permalink: /building/
+---
+{% include buildinghero.html %}
+
+<section class="max-w-6xl mx-auto px-6 py-16">
+  <h1 class="text-4xl font-bold mb-12 text-center">Projects</h1>
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {% assign project_posts = site.building %}
+    {% for project in project_posts %}
+      <a href="{{ project.url }}" class="group block rounded-xl overflow-hidden border border-gray-800 hover:shadow-lg transition-all duration-200 bg-card">
+        {% if project.image %}
+          <img src="{{ project.image }}" alt="{{ project.title }}" class="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300">
+        {% else %}
+          <div class="h-48 w-full bg-gray-700 flex items-center justify-center text-white text-lg">No Image</div>
+        {% endif %}
+        <div class="p-6 space-y-2">
+          <h2 class="text-xl font-semibold group-hover:underline" style="color: var(--accent);">{{ project.title }}</h2>
+          <p class="text-sm text-muted-foreground">{{ project.description }}</p>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>

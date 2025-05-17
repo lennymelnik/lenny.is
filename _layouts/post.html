@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<article class="max-w-3xl mx-auto px-6 py-16 prose-invert prose-lg">
+  <header class="mb-12">
+    <h1 class="text-4xl font-bold mb-4">{{ page.title }}</h1>
+    <p class="text-sm text-gray-400">
+      {{ page.date | date: "%B %d, %Y" }}
+    </p>
+    {% if page.author %}
+      <p class="text-sm text-gray-400">
+        By {{ page.author }}
+      </p>
+    {% endif %}
+  </header>
+
+  <section class="post-content">
+    {{ content }}
+  </section>
+
+  <footer class="mt-16 pt-8 border-t border-gray-700 text-sm text-gray-500">
+    <a href="/blogging" class="hover:underline">&larr; Back to all posts</a>
+  </footer>
+</article>

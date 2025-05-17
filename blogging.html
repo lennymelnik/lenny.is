@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{% include bloghero.html %}
+<section class="max-w-4xl mx-auto px-6 py-16 space-y-8">
+  {% for post in site.posts %}
+    <article
+      class="p-6 rounded-lg transition-shadow hover:shadow-lg"
+      style="background-color: var(--card); color: var(--card-foreground); border: 1px solid var(--border);"
+    >
+      <h2 class="text-2xl font-bold mb-2">
+        <a href="{{ post.url }}" style="color: var(--accent); text-decoration: none;" class="hover:underline">
+          {{ post.title }}
+        </a>
+      </h2>
+      <p class="text-sm mb-4" style="color: var(--muted-foreground);">
+        {{ post.date | date: "%B %d, %Y" }}
+      </p>
+      {% if post.excerpt %}
+        <p style="color: var(--muted-foreground);">
+          {{ post.excerpt | strip_html | truncatewords: 30 }}
+        </p>
+      {% endif %}
+      <a href="{{ post.url }}" class="inline-block mt-4 font-semibold hover:underline" style="color: var(--accent);">
+        Read more →
+      </a>
+    </article>
+  {% endfor %}
+</section>

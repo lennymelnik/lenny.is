@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }} | Lenny.is</title>
+    <link rel="shortcut icon" type="image/jpg" href="/assets/leonard.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@0.4.x/dist/typography.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/sql.min.js"></script>
+    
+    <script>hljs.highlightAll();</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <style>
+        :root {
+            --background: #0f172a;
+            --foreground: #f8fafc;
+            --card: #1e293b;
+            --card-foreground: #f8fafc;
+            --border: #334155;
+            --input: #334155;
+            --primary: #f8fafc;
+            --primary-foreground: #0f172a;
+            --secondary: #1e293b;
+            --secondary-foreground: #f8fafc;
+            --accent: #3b82f6;
+            --accent-foreground: #f8fafc;
+            --muted: #334155;
+            --muted-foreground: #94a3b8;
+            --radius: 0.5rem;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+        }
+    </style>
+
+
+    {% seo %}
+</head>
+
+<body>
+    {% include header.html %}
+    <main>
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+</body>
+
+</html>

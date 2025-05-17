@@ -1,0 +1,39 @@
+<header style="background-color: var(--background); color: var(--primary);">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <!-- Logo -->
+      <a href="/" class="text-2xl font-extrabold lowercase flex items-center">
+        lenny<span style="color: var(--accent);">.</span>is
+      </a>
+  
+      <!-- Hamburger button (Mobile) -->
+      <div class="md:hidden">
+        <input type="checkbox" id="menu-toggle" class="peer hidden">
+        <label for="menu-toggle" class="cursor-pointer flex flex-col gap-1">
+          <span class="block w-6 h-0.5" style="background-color: var(--primary);"></span>
+          <span class="block w-6 h-0.5" style="background-color: var(--primary);"></span>
+          <span class="block w-6 h-0.5" style="background-color: var(--primary);"></span>
+        </label>
+  
+        <!-- Mobile menu -->
+        <nav class="absolute right-6 top-16 p-6 rounded shadow-md hidden peer-checked:block" style="background-color: var(--card);">
+          <ul class="flex flex-col gap-4 text-lg font-semibold">
+            <li><a href="/" class="hover:text-[var(--accent)]">Home</a></li>
+            <li><a href="/Building" class="hover:text-[var(--accent)]">Building</a></li>
+            <li><a href="/Exploring" class="hover:text-[var(--accent)]">Exploring</a></li>
+            <li><a href="/blogging" class="hover:text-[var(--accent)]">Blogging</a></li>
+          </ul>
+        </nav>
+      </div>
+  
+      <!-- Desktop menu -->
+      <nav class="hidden md:flex">
+        <ul class="flex gap-8 text-lg font-semibold">
+            <li><a href="/" class="hover:text-[var(--accent)]">Home</a></li>
+            <li><a href="/Building" class="hover:text-[var(--accent)]">Building</a></li>
+            <li><a href="/Exploring" class="hover:text-[var(--accent)]">Exploring</a></li>
+            <li><a href="/blogging" class="hover:text-[var(--accent)]">Blogging</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
