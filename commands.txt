@@ -1,0 +1,2 @@
+Generate YML for photos:
+find assets/photography/05-31-city -type f -iname "*.jpg" | sort | sed 's|^|/|' | awk '{printf("- path: %s\n  alt: Photo\n", $0)}' > _data/photos_temp.yml

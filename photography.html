@@ -1,0 +1,17 @@
+---
+layout: default
+title: Lenny.is Taking Photos
+---
+
+{% include photographyhero.html %}
+
+<section class="bg-slate-950 py-20 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+     {% for photo in site.data.photos %}
+      <img src="{{ photo.path }}"  alt="{{ photo.alt }}"  class="rounded-lg object-cover w-full aspect-[3/4] transform transition-transform duration-300 hover:scale-105">
+      {% endfor %}
+    </div>
+  </div>
+</section>
