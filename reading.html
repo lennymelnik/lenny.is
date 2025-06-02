@@ -8,30 +8,38 @@ title: Is Reading
     <h2 class="text-3xl font-bold mb-8">My Good Reads</h2>
     <ul class="space-y-6">
       {% for article in site.data.reads %}
-      <li class="bg-slate-900 rounded-lg border border-slate-800 hover:bg-slate-800 transition-colors">
-        <div class="flex items-center justify-between p-5">
-          <div class="space-y-1">
-            <p class="text-lg font-semibold text-white">{{ article.title }}</p>
+      <li>
+        <a
+          href="{{ article.url }}"
+          target="_blank"
+          rel="noopener"
+          class="block bg-slate-900 rounded-lg border border-slate-800 hover:bg-slate-800 transition-colors"
+        >
+          <div class="flex items-center justify-between p-5">
+            <div class="space-y-1">
+              <p class="text-lg font-semibold text-white">{{ article.title }}</p>
+
+              {% if article.type == "Book" %}
+                <!-- We’ve removed the “View on Amazon” button,
+                     since the entire card already links to Amazon. -->
+                <p class="text-sm text-slate-400">View on Amazon</p>
+              {% else %}
+                <!-- For articles, we simply show the URL as grey text. -->
+                <p class="text-sm text-slate-400 break-all">{{ article.url }}</p>
+              {% endif %}
+            </div>
 
             {% if article.type == "Book" %}
-            <a href="{{ article.url }}" target="_blank" rel="noopener" class="mt-2 inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded">
-              View on Amazon
-            </a>
+              <span class="inline-block bg-blue-600 text-white text-xs font-semibold uppercase px-3 py-1 rounded-full">
+                Book
+              </span>
             {% else %}
-            <p class="text-sm text-slate-400 break-all">{{ article.url }}</p>
+              <span class="inline-block bg-green-600 text-white text-xs font-semibold uppercase px-3 py-1 rounded-full">
+                Article
+              </span>
             {% endif %}
           </div>
-
-          {% if article.type == "Book" %}
-          <span class="inline-block bg-blue-600 text-white text-xs font-semibold uppercase px-3 py-1 rounded-full">
-            Book
-          </span>
-          {% else %}
-          <span class="inline-block bg-green-600 text-white text-xs font-semibold uppercase px-3 py-1 rounded-full">
-            Article
-          </span>
-          {% endif %}
-        </div>
+        </a>
       </li>
       {% endfor %}
     </ul>
