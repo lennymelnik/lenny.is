@@ -5,6 +5,7 @@ description: Simple blockchain powered encrypted chat.
 url : /building/erc
 date: 2024-12-01
 image: /assets/projects/erc.jpg
+published: false
 ---
 
 Will add details later...
