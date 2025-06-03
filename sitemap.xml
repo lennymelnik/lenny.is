@@ -8,7 +8,7 @@ search: exclude
 
     {% for page in site.pages %}
     <url>
-        <loc>{{page.url}}</loc>
+        <loc>https://lenny.is{{page.url}}</loc>
         <lastmod>{{site.time | date: '%Y-%m-%d' }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -17,7 +17,7 @@ search: exclude
 
     {% for post in site.posts %}
     <url>
-        <loc>{{post.url}}</loc>
+        <loc>https://lenny.is{{post.url}}</loc>
         <lastmod>{{site.time | date: '%Y-%m-%d' }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -27,7 +27,7 @@ search: exclude
     {% assign project_posts = site.building %}
     {% for project in project_posts %}
     <url>
-        <loc>{{project.url}}</loc>
+        <loc>https://lenny.is{{project.url}}</loc>
         <lastmod>{{site.time | date: '%Y-%m-%d' }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
