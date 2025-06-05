@@ -21,17 +21,17 @@ Here are some of the photos I took:
 
 
 ### A cool mirror I found outside
-![Self Photo](/assets/photography/05-31-city/IMG_0308.jpg)
+![Self Photo](/assets/photography/05-31-city/IMG_0308-2.jpg)
 
 ### A hot dog/juice vendor that had a nice colored umbrella
-![Hot dog cart umbrella](/assets/photography/05-31-city/IMG_0290.jpg)
+![Hot dog cart umbrella](/assets/photography/05-31-city/IMG_0290-2.jpg)
 
 
 ### A Running Squirrel
-![Running Squirrel](/assets/photography/05-31-city/IMG_0274.jpg)
+![Running Squirrel](/assets/photography/05-31-city/IMG_0274-2.jpg)
 
 ### The lobby of a apartment complex
-![The lobby of a apartment complex](/assets/photography/05-31-city/IMG_0078.jpg)
+![The lobby of a apartment complex](/assets/photography/05-31-city/IMG_0078-2.jpg)
 
 ### Looking down a street
-![Looking down a street](/assets/photography/05-31-city/IMG_0091.jpg)
+![Looking down a street](/assets/photography/05-31-city/IMG_0091-2.jpg)
