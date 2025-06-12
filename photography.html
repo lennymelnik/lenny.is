@@ -10,8 +10,9 @@ image: /assets/photography/05-31-city/IMG_0308-2.jpg
   <div class="max-w-7xl mx-auto px-6">
     
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-     {% for photo in site.data.photos %}
-      <img src="{{ photo.path }}"  alt="{{ photo.alt }}"  class="rounded-lg object-cover w-full aspect-[4/4] transform transition-transform duration-300 hover:scale-105">
+      {% assign shuffled_photos = site.data.photos | shuffle %}
+      {% for photo in shuffled_photos %}
+        <img src="{{ photo.path }}" alt="{{ photo.alt }}" class="rounded-lg object-cover w-full aspect-[4/4] transform transition-transform duration-300 hover:scale-105">
       {% endfor %}
     </div>
   </div>
